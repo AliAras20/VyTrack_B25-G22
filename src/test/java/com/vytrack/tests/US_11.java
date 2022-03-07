@@ -99,15 +99,6 @@ public class US_11 extends TestBase {
         } catch (InterruptedException e) {
         }
     }
-    @DataProvider(name = "Credentials")
-    public static Object[][] provideDataC() {
-        return new Object[][]{
-                {"user160"},
-                {"user161"},
-                {"storemanager80"},
-                {"salesmanager137"}
-        };
-    }
     @DataProvider(name = "User Credentials")
     public static Object[][] provideDataUC() {
         return new Object[][]{
