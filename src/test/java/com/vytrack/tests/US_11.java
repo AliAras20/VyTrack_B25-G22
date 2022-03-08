@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertEquals;
 
 public class US_11 extends TestBase {
@@ -26,9 +25,9 @@ public class US_11 extends TestBase {
 
         sleep(2);
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[2]"))).click().perform();
+        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[2]"))).perform();
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).click().perform();
+        action.click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
         sleep(1);
 
@@ -47,11 +46,11 @@ public class US_11 extends TestBase {
 
         sleep(1);
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]"))).click().perform();
+        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]"))).perform();
 
         sleep(1);
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).click().perform();
+        action.click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
         sleep(1);
 
@@ -70,11 +69,11 @@ public class US_11 extends TestBase {
 
         sleep(1);
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]"))).click().perform();
+        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]"))).perform();
 
         sleep(1);
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).click().perform();
+        action.click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
         sleep(1);
 
