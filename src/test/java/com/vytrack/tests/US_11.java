@@ -25,9 +25,8 @@ public class US_11 extends TestBase {
 
         sleep(2);
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[2]"))).perform();
-
-        action.click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
+        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[2]")))
+                .pause(1000).click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
         sleep(1);
 
@@ -46,11 +45,8 @@ public class US_11 extends TestBase {
 
         sleep(1);
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]"))).perform();
-
-        sleep(1);
-
-        action.click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
+        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]")))
+                        .pause(1000).click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
         sleep(1);
 
@@ -69,11 +65,8 @@ public class US_11 extends TestBase {
 
         sleep(1);
 
-        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]"))).perform();
-
-        sleep(1);
-
-        action.click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
+        action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]")))
+                .pause(1000).click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
         sleep(1);
 
