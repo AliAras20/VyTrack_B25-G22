@@ -6,6 +6,8 @@ import com.vytrack.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
@@ -23,12 +25,12 @@ public class US_11 extends TestBase {
 
         Actions action = new Actions(Driver.getDriver());
 
-        sleep(2);
+        waitUntilPresenceOf("//ul[@class='nav-multilevel main-menu']/li[2]", 3);
 
         action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[2]")))
                 .pause(1000).click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
-        sleep(1);
+        waitUntilPresenceOf("//div[@class='message']", 3);
 
         assertEquals(Driver.getDriver().findElement(By.xpath("//div[@class='message']")).getText(), "You do not have permission to perform this action.");
     }
@@ -43,12 +45,12 @@ public class US_11 extends TestBase {
 
         Actions action = new Actions(Driver.getDriver());
 
-        sleep(1);
+        waitUntilPresenceOf("//ul[@class='nav-multilevel main-menu']/li[1]", 3);
 
         action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]")))
                         .pause(1000).click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
-        sleep(1);
+        waitUntilPresenceOf("//ul[@class='icons-holder']/li[2]/input", 3);
 
         assertEquals(Driver.getDriver().findElement(By.xpath("//ul[@class='icons-holder']/li[2]/input")).getAttribute("value"), "1");
     }
@@ -63,12 +65,12 @@ public class US_11 extends TestBase {
 
         Actions action = new Actions(Driver.getDriver());
 
-        sleep(1);
+        waitUntilPresenceOf("//ul[@class='nav-multilevel main-menu']/li[1]", 3);
 
         action.moveToElement(Driver.getDriver().findElement(By.xpath("//ul[@class='nav-multilevel main-menu']/li[1]")))
                 .pause(1000).click(Driver.getDriver().findElement(By.xpath("//a/span[.='Vehicle Odometer']"))).perform();
 
-        sleep(1);
+        waitUntilPresenceOf("//div[@class='btn-group']/button", 3);
 
         assertEquals(Driver.getDriver().findElement(By.xpath("//div[@class='btn-group']/button")).getText(), "25");
     }
@@ -85,10 +87,12 @@ public class US_11 extends TestBase {
         driver.findElement(By.xpath("//button[@id='_submit']")).click();
 
     }
-    public static void sleep(int seconds){
+    public static void waitUntilPresenceOf(String locator, int waitTimeSec){
         try {
-            Thread.sleep(seconds * 1000);
-        } catch (InterruptedException e) {
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), waitTimeSec);
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
     @DataProvider(name = "User Credentials")
