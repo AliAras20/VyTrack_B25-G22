@@ -1,5 +1,6 @@
 package com.vytrack.tests;
 
+
 import com.vytrack.utilities.Driver;
 import com.vytrack.utilities.VyTrackUtils;
 import org.openqa.selenium.By;
@@ -13,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class US_6 {
+public class US_6  {
 
    public WebElement findElementByXpath(String xpath){
        return Driver.getDriver().findElement(By.xpath(xpath));
@@ -88,7 +89,6 @@ public class US_6 {
         List<String> expectedTitles = new ArrayList<>(Arrays.asList("View" ,"Edit", "Delete"));
         Assert.assertEquals(expectedTitles,actualTitles,"Actual Titles are not matching with the expected ones");
 
-
         Driver.closeDriver();
 
     }
@@ -130,7 +130,3 @@ public class US_6 {
         Driver.closeDriver();
     }
 }
-/*
-Story6:  As a user, I want to see edit car info icons from the Vehicle page.
-AC #1:  users should see “view, edit, delete” when they hover the mouse to the 3 dots “…”
- */
