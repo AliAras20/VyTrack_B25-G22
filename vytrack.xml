@@ -1,15 +1,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="vytrack">
-
-
+<suite name="vytrack" >
     <test name="Sprint 2">
         <classes>
-
-
-
+            <class name="com.vytrack.tests.US4"></class>
+            <class name="com.vytrack.tests.US_1"></class>
+            <class name="com.vytrack.tests.US_2"></class>
+            <class name="com.vytrack.tests.US_3"></class>
+            <class name="com.vytrack.tests.US_5"></class>
+            <class name="com.vytrack.tests.US_6"></class>
+            <class name="com.vytrack.tests.US_11"></class>
+            <class name="com.vytrack.tests.US_12"></class>
+            <class name="com.vytrack.tests.US_13"></class>
+            <class name="com.vytrack.tests.US_14"></class>
 
         </classes>
     </test>
-
 </suite>
